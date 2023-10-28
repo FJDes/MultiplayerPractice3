@@ -22,4 +22,13 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
         PhotonNetwork.JoinLobby();
     }
+
+    public override void OnJoinedLobby()
+    {
+        base.OnJoinedLobby();
+
+        PhotonNetwork.JoinOrCreateRoom("MyRoomName", null, null);
+
+        Debug.Log("We are connected and in a room now");
+    }
 }
