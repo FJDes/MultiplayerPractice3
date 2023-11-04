@@ -7,10 +7,13 @@ public class Movement : MonoBehaviour
 {
 
     public float walkSpeed = 4f;
+    public float sprintSpeed = 14f;
     public float maxVelocityChange = 10f;
 
     private Vector2 input;
     private Rigidbody rb;
+
+    private bool sprinting;
 
 
 
@@ -25,16 +28,18 @@ public class Movement : MonoBehaviour
     {
         input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         input.Normalize();
+
+        sprinting = Input.GetButton("Sprint");
     }
 
     void FixedUpdate() 
     {
-        rb.AddForce(CalculateMovement(walkSpeed), ForceMode.VelocityChange);    
+        rb.AddForce(CalculateMovement(sprinting ? sprintSpeed : walkSpeed), ForceMode.VelocityChange);    
     }
 
     Vector3 CalculateMovement(float _speed) 
     {
-        Vector3 targetVelocity = new Vector3(input.x, 0, input.y); //z plutot ?
+        Vector3 targetVelocity = new Vector3(input.x, 0, input.y);
         targetVelocity = transform.TransformDirection(targetVelocity);
 
         targetVelocity *= _speed;
