@@ -34,12 +34,15 @@ public class RoomManager : MonoBehaviourPunCallbacks
         base.OnJoinedLobby();
 
         PhotonNetwork.JoinOrCreateRoom("MyRoomName", null, null);
-        Debug.Log("We are connected and in a room now");
+        Debug.Log("We Create/Join room");
     }
 
     public override void OnJoinedRoom()
     {
-         GameObject _player = PhotonNetwork.Instantiate(player.name, spawnPoint.position, Quaternion.identity);
+        Debug.Log("We are connected and in a room now");
+        
+        GameObject _player = PhotonNetwork.Instantiate(player.name, spawnPoint.position, Quaternion.identity);
         Debug.Log("New Player instantiate");
+        _player.GetComponent<PlayerSetup>().IsLocalPlayer();
     }
 }

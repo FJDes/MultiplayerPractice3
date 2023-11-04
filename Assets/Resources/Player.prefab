@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 916950883143269913}
   - component: {fileID: 8921010943770934284}
   - component: {fileID: 6152234883774026052}
+  - component: {fileID: -4513081145270832863}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -120,7 +121,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4289781721966102321}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 800122c7812832d4eb17db863387c6fb, type: 3}
   m_Name: 
@@ -210,6 +211,20 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &-4513081145270832863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4289781721966102321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1208545dbbeed9b478224fd93ea7a76a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 4526643490204321195}
+  camera: {fileID: 8297862504280754511}
 --- !u!1 &8297862504280754511
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1046351372700080034
 Transform:
   m_ObjectHideFlags: 0
