@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     public float sprintSpeed = 14f;
     public float maxVelocityChange = 10f;
 
+    [Space]
     public float jumpHeight = 30f;
 
     private Vector2 input;
