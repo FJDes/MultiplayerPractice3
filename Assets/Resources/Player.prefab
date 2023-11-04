@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 8921010943770934284}
   - component: {fileID: 6152234883774026052}
   - component: {fileID: -4513081145270832863}
+  - component: {fileID: 3676053820868640221}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -34,7 +35,7 @@ Transform:
   m_GameObject: {fileID: 4289781721966102321}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.63, z: -0.135}
+  m_LocalPosition: {x: 0, y: 1.63, z: -0.166}
   m_LocalScale: {x: 1, y: 1.2753, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -127,7 +128,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 4
+  sprintSpeed: 14
   maxVelocityChange: 10
+  jumpHeight: 30
 --- !u!54 &6908188464780045278
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -225,6 +228,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 4526643490204321195}
   camera: {fileID: 8297862504280754511}
+--- !u!135 &3676053820868640221
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4289781721966102321}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.46804106
+  m_Center: {x: 0, y: -0.72236717, z: 0}
 --- !u!1 &8297862504280754511
 GameObject:
   m_ObjectHideFlags: 0
