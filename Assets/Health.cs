@@ -7,6 +7,8 @@ using TMPro;
 public class Health : MonoBehaviour
 {
    public int health;
+   
+   public bool IsLocalPlayer;
 
    [Header("UI")]
    public TextMeshProUGUI healthText;
@@ -20,6 +22,10 @@ public class Health : MonoBehaviour
 
     if (health <= 0)
     {
+        if (IsLocalPlayer) {
+            RoomManager.instance.RespawnPlayer();
+        }
+        
         Destroy(gameObject);
     }
    } 
