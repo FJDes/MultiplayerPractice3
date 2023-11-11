@@ -980,6 +980,10 @@ MonoBehaviour:
   ammoText: {fileID: 6821209030659420373}
   animation: {fileID: 2732709904364074114}
   reload: {fileID: 7400000, guid: 41564d838635f0840b145fe9048517fa, type: 2}
+  recoverPercent: 0.7
+  recoilUp: 0.02
+  recoilBack: 0.05
+  recovering: 0
 --- !u!114 &1150003731198786067
 MonoBehaviour:
   m_ObjectHideFlags: 0
